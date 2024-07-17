@@ -1,0 +1,11 @@
+body {
+    text-align:center;
+    font-family: helvetica;
+    background-color: rgb(70, 66, 66);
+  }
+  canvas {
+    border: 2px solid rgb(160, 87, 87);
+  }
+  .heading, h3{
+    color:aqua;
+  }

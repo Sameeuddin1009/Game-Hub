@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #131111;
+            padding: 20px;
+        }
+        h1 {
+            color: aqua;
+            margin-bottom: 30px;
+        }
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .game {
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: none; /* Hide games by default */
+        }
+        .game:hover {
+            transform: translateY(-5px);
+        }
+        .game img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .game h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+        .category-buttons {
+            margin-bottom: 20px;
+        }
+        .category-buttons button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .category-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .benefits {
+            margin-top: 20px;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Hub</h1>
+    <div class="category-buttons">
+        <button onclick="showCategory('play')">Play with English</button>
+        <button onclick="showCategory('fun')">Fun Games</button>
+    </div>
+    <div class="game-container" id="game-container">
+        <a href="Platform-game/index.html" class="game fun">
+            <img src="image/platform.png" alt="Game 1">
+            <h2>Platform game </h2>
+        </a>
+        <a href="Rock-Paper-Scissor/index.html" class="game fun">
+            <img src="image/OIP.jpeg" alt="Game 2">
+            <h2>Rock Paper and Scissor</h2>
+        </a>
+        <a href="Snake-game/index.html" class="game fun">
+            <img src="image/OIP (1).jpeg" alt="Game 3">
+            <h2>Snake Game </h2>
+        </a>
+        <a href="Tic-tac-toe/index.html" class="game fun">
+            <img src="image/tic-tac-toe.png" alt="Game 4">
+            <h2>Tic Tac Toe</h2>
+        </a>
+        <a href="Memory-power/index.html" class="game fun">
+            <img src="image/Memory.png" alt="Game 5">
+            <h2>Memory game</h2>
+        </a>
+        <a href="Word Scramble Game/index.html" class="game play">
+            <img src="image/Scramble.png" alt="Game 5">
+            <h2>Word Scramble</h2>
+        </a>
+        <a href="Word Guessing Game/index.html" class="game play">
+            <img src="image/Guess.png" alt="Game 5">
+            <h2>Word Guessing</h2>
+        </a>
+    </div>
+    <div class="benefits" id="benefits">
+        <h2 style="color: rgb(137, 184, 184); text-align: center;"><i>Benefits of Playing Games</i></h2>
+        <p>
+            <b>Cognitive Benefits</b>: Games can improve cognitive skills such as problem-solving, critical thinking, memory, and concentration. They often require players to strategize and make decisions quickly, which can help improve these skills over time.<br><br>
+            <b>Social Benefits</b>: Many games are multiplayer or involve interaction with others, either online or in person. This can help improve social skills, teamwork, and communication.<br><br>
+            <b>Stress Relief</b>: Playing games can be a fun and enjoyable way to unwind and relax, reducing stress and improving mood.<br><br>
+            <b>Creativity</b>: Some games encourage creativity and imagination, allowing players to create their own worlds, stories, or characters.<br><br>
+            <b>Learning Opportunities</b>: Educational games can help teach new concepts, skills, or languages in an engaging and interactive way.<br><br>
+            <b>Physical Benefits</b>: Certain games, especially those that involve physical activity or movement, can improve coordination, fitness, and overall health.<br><br>
+            <b>Entertainment</b>: Perhaps the most obvious benefit, games provide entertainment and enjoyment, offering a break from daily routine and boredom.
+        </p>
+    </div>
+    <script>
+        function showCategory(category) {
+            var games = document.querySelectorAll('.game');
+            games.forEach(function(game) {
+                if (game.classList.contains(category)) {
+                    game.style.display = 'block'; // Show games in the selected category
+                } else {
+                    game.style.display = 'none'; // Hide games not in the selected category
+                }
+            });
+
+            // Hide the benefits section when a category button is clicked
+            document.getElementById('benefits').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
